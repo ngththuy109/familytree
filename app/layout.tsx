@@ -3,6 +3,7 @@ import './globals.css';
 import { TopBar } from '@/components/layout/TopBar';
 import { BottomNav } from '@/components/layout/BottomNav';
 import { RegisterSW } from '@/components/pwa/RegisterSW';
+import { AppProviders } from '@/components/providers/AppProviders';
 
 export const metadata: Metadata = {
   title: 'Gia Phả Việt',
@@ -23,9 +24,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="vi">
       <body className="min-h-dvh">
-        <TopBar />
-        <main className="mx-auto w-full max-w-2xl px-4 pb-28 pt-4">{children}</main>
-        <BottomNav />
+        <AppProviders>
+          <TopBar />
+          <main className="mx-auto w-full max-w-2xl px-4 pb-28 pt-4">{children}</main>
+          <BottomNav />
+        </AppProviders>
         <RegisterSW />
       </body>
     </html>
