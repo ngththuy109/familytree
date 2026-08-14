@@ -25,9 +25,14 @@ export default function ListPage() {
     <div>
       <div className="mb-4 flex items-center justify-between gap-2">
         <h1 className="truncate text-xl font-bold">{snapshot.clan.name}</h1>
-        <Link href="/cay" className="shrink-0 text-sm text-primary">
-          🌳 Xem cây →
-        </Link>
+        <div className="flex shrink-0 items-center gap-3 text-sm">
+          <Link href="/cay" className="text-primary">
+            🌳 Cây
+          </Link>
+          <Link href="/them" className="rounded-lg bg-primary px-3 py-1.5 font-semibold text-primary-fg">
+            ＋ Thêm
+          </Link>
+        </div>
       </div>
       <p className="mb-4 text-sm text-muted">{snapshot.members.length} thành viên</p>
       <ListView snapshot={snapshot} />

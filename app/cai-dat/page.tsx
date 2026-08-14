@@ -76,7 +76,14 @@ export default function SettingsPage() {
         </select>
       </section>
 
-      <section>
+      <section className="flex flex-col gap-2">
+        <Link
+          href="/quan-tri"
+          className="flex items-center justify-between rounded-xl border border-border bg-surface p-4"
+        >
+          <span className="font-medium">Quản trị thành viên (thêm/sửa/xóa)</span>
+          <span aria-hidden>→</span>
+        </Link>
         <Link
           href="/xuat-nhap"
           className="flex items-center justify-between rounded-xl border border-border bg-surface p-4"
