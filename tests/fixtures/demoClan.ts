@@ -110,8 +110,9 @@ const members: Member[] = [
   // Đời 2 — con của Cả & Nhất
   mem({ id: 'm-an', fullName: 'Nguyễn Văn An', familyName: 'Nguyễn', givenName: 'An', gender: 'male', isAlive: false, birth: solar(1940, 1, 10), death: lunar(2015, 11, 5), siblingOrder: 1, generation: 2, branchId: 'b-chi-an', achievements: 'Trưởng họ đời thứ hai.' }),
   mem({ id: 'm-binh', fullName: 'Nguyễn Thị Bình', familyName: 'Nguyễn', givenName: 'Bình', gender: 'female', birth: solar(1943, 6, 6), siblingOrder: 2, generation: 2, branchId: 'b-phai' }),
-  mem({ id: 'm-cuong', fullName: 'Nguyễn Văn Cường', familyName: 'Nguyễn', givenName: 'Cường', gender: 'male', birth: solar(1946, 9, 9), siblingOrder: 3, generation: 2, branchId: 'b-chi-cuong' }),
-  mem({ id: 'm-dung', fullName: 'Nguyễn Văn Dũng', familyName: 'Nguyễn', givenName: 'Dũng', gender: 'male', birth: solar(1949, 4, 4), siblingOrder: 4, generation: 2, branchId: 'b-phai', note: 'Con nuôi.' }),
+  mem({ id: 'm-hanh', fullName: 'Nguyễn Thị Hạnh', familyName: 'Nguyễn', givenName: 'Hạnh', gender: 'female', birth: solar(1945, 3, 3), siblingOrder: 3, generation: 2, branchId: 'b-phai' }),
+  mem({ id: 'm-cuong', fullName: 'Nguyễn Văn Cường', familyName: 'Nguyễn', givenName: 'Cường', gender: 'male', birth: solar(1946, 9, 9), siblingOrder: 4, generation: 2, branchId: 'b-chi-cuong' }),
+  mem({ id: 'm-dung', fullName: 'Nguyễn Văn Dũng', familyName: 'Nguyễn', givenName: 'Dũng', gender: 'male', birth: solar(1949, 4, 4), siblingOrder: 5, generation: 2, branchId: 'b-phai', note: 'Con nuôi.' }),
 
   // Dâu/rể đời 2 (người ngoài họ)
   mem({ id: 'm-hoa', fullName: 'Lê Thị Hoa', familyName: 'Lê', givenName: 'Hoa', gender: 'female', birth: solar(1944, 2, 2), note: 'Vợ cả ông An.' }),
@@ -148,6 +149,8 @@ const parentLinks: ParentLink[] = [
   pl('p-nhat-an', 'm-nhat', 'm-an', 'mother', 'biological', 'u-ca-nhat'),
   pl('p-ca-binh', 'm-ca', 'm-binh', 'father', 'biological', 'u-ca-nhat'),
   pl('p-nhat-binh', 'm-nhat', 'm-binh', 'mother', 'biological', 'u-ca-nhat'),
+  pl('p-ca-hanh', 'm-ca', 'm-hanh', 'father', 'biological', 'u-ca-nhat'),
+  pl('p-nhat-hanh', 'm-nhat', 'm-hanh', 'mother', 'biological', 'u-ca-nhat'),
   pl('p-ca-cuong', 'm-ca', 'm-cuong', 'father', 'biological', 'u-ca-nhat'),
   pl('p-nhat-cuong', 'm-nhat', 'm-cuong', 'mother', 'biological', 'u-ca-nhat'),
   pl('p-ca-dung', 'm-ca', 'm-dung', 'father', 'adopted', 'u-ca-nhat'),

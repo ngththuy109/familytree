@@ -73,9 +73,9 @@ describe('ordering — đánh số đời', () => {
     expect(g.get('m-dung')).toBe(2);
   });
 
-  it('orderedChildren của thủy tổ theo thứ tự sinh: An, Bình, Cường, Dũng', () => {
+  it('orderedChildren của thủy tổ theo thứ tự sinh: An, Bình, Hạnh, Cường, Dũng', () => {
     const kids = orderedChildren(demoClan, 'm-ca');
-    expect(kids.map((m) => m.id)).toEqual(['m-an', 'm-binh', 'm-cuong', 'm-dung']);
+    expect(kids.map((m) => m.id)).toEqual(['m-an', 'm-binh', 'm-hanh', 'm-cuong', 'm-dung']);
   });
 
   it('không lặp vô hạn khi có chu trình cha-con', () => {
