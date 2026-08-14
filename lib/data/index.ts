@@ -5,18 +5,18 @@
 
 import { createLocalRepository } from './local/localRepository';
 import { seedIfEmpty } from './local/seed';
+import { createSupabaseRepository } from './supabase/supabaseRepository';
 import type { DataRepository } from './repository';
 
 let cached: DataRepository | null = null;
 
 export function isSupabaseConfigured(): boolean {
-  return Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL);
+  return Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
 }
 
 export function getRepository(): DataRepository {
   if (cached) return cached;
-  // TODO(T-17): if (isSupabaseConfigured()) cached = createSupabaseRepository();
-  cached = createLocalRepository();
+  cached = isSupabaseConfigured() ? createSupabaseRepository() : createLocalRepository();
   return cached;
 }
 

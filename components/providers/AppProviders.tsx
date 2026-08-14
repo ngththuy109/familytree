@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useAppStore } from '@/lib/store/useAppStore';
 import { DEMO_CLAN_ID, ensureSeeded } from '@/lib/data';
 import { ClanDataProvider } from '@/lib/data/useClan';
+import { AuthGate } from '@/components/auth/AuthGate';
 
 /**
  * Khởi tạo phía client: seed dữ liệu demo (local-first), chọn dòng họ mặc định,
@@ -33,5 +34,9 @@ export function AppProviders({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
-  return <ClanDataProvider>{children}</ClanDataProvider>;
+  return (
+    <AuthGate>
+      <ClanDataProvider>{children}</ClanDataProvider>
+    </AuthGate>
+  );
 }
