@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-scale: 1;
+  /* Light palette — nâu đỏ truyền thống + vàng đồng */
+  --bg: #f7f5f0;
+  --surface: #ffffff;
+  --border: #e3ddd0;
+  --text: #201b13;
+  --muted: #6b6357;
+  --primary: #7c3b2e;
+  --primary-fg: #ffffff;
+  --accent: #9a6a12;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #16130f;
+    --surface: #211d17;
+    --border: #372f25;
+    --text: #f0e9dd;
+    --muted: #a99f8e;
+    --primary: #c97a5f;
+    --primary-fg: #1a1410;
+    --accent: #d8a72a;
+  }
+}
+
+/* Chế độ người lớn tuổi: chữ to hơn + viền/tương phản rõ hơn */
+:root[data-elderly='true'] {
+  --font-scale: 1.3;
+  --border: #b8ad99;
+  --muted: #4a4335;
+}
+
+html {
+  font-size: calc(100% * var(--font-scale));
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* tiện ích chung */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
