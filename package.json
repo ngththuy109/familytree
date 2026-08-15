@@ -1,0 +1,48 @@
+{
+  "name": "gia-pha-viet",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Gia Phả Việt — Phần mềm quản lý & kết nối gia phả",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "e2e": "playwright test",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.45.4",
+    "d3-hierarchy": "3.1.2",
+    "d3-selection": "3.0.0",
+    "d3-zoom": "3.0.0",
+    "idb": "8.0.0",
+    "next": "14.2.35",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "zustand": "4.5.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@testing-library/jest-dom": "6.5.0",
+    "@testing-library/react": "16.0.1",
+    "@types/d3-hierarchy": "3.1.7",
+    "@types/d3-selection": "3.0.11",
+    "@types/d3-zoom": "3.0.8",
+    "@types/node": "20.16.11",
+    "@types/react": "18.3.11",
+    "@types/react-dom": "18.3.0",
+    "@vitejs/plugin-react": "4.3.2",
+    "autoprefixer": "10.4.20",
+    "eslint": "8.57.1",
+    "eslint-config-next": "14.2.35",
+    "fake-indexeddb": "6.0.0",
+    "jsdom": "25.0.1",
+    "postcss": "8.4.47",
+    "tailwindcss": "3.4.13",
+    "typescript": "5.6.3",
+    "vitest": "2.1.2"
+  }
+}

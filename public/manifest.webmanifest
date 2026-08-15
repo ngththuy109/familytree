@@ -1,0 +1,16 @@
+{
+  "name": "Gia Phả Việt",
+  "short_name": "Gia Phả",
+  "description": "Phần mềm quản lý & kết nối gia phả gia đình Việt Nam",
+  "lang": "vi",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f7f5f0",
+  "theme_color": "#7c3b2e",
+  "icons": [
+    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icons/maskable.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

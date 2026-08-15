@@ -5,7 +5,7 @@ status: todo            # todo | in_progress | review | done | blocked
 model: sonnet           # sonnet | opus | codex
 effort: medium          # low | medium | high
 depends_on: []          # ["T-02"]
-touches:                # file/thư mục sẽ dùng — phát hiện xung đột khi chạy song song
+touches:                # file/thư mục sẽ đụng — phát hiện xung đột khi chạy song song
   - src/worker/...
 prd_refs: []            # ["§4", "§11"] — mục PRD là nguồn sự thật cho task này
 owner: null             # agent id khi đang chạy
